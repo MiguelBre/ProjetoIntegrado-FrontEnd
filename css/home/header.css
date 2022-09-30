@@ -1,0 +1,43 @@
+header{
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #3347B0;
+}
+.logo-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 5%;
+    width: 10%;
+    height: 100%;
+    /* background-color: aliceblue; */
+}
+.logo-text{
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    padding-left: 10%;
+}
+.logo-image{
+    width: 80px;
+    height: 100px;
+}
+.exit-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 5%;
+    gap: 10%;
+    text-decoration: none;
+}
+.exit-text{
+    font-size: 2rem;
+    color: white;
+}
+.exit-image{
+    height: 43px;
+    width: 48px;
+}

@@ -1,0 +1,64 @@
+main{
+    height: 75vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.instruction-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    width: 30vw;
+    height: 80%;
+    gap: 10%;
+    /* background-color: antiquewhite; */
+}
+.instruction-text{
+    width: 100%;
+    font-size: 5rem;
+    font-weight: 300;
+}
+.instruction-container span{
+    color: var(--primary-blue);
+    font-size: 6rem;
+    font-weight: bold;
+}
+.instruction-image{
+    width: 80%;
+}
+.studant{
+    height: 60%;
+    /* background-color: antiquewhite; */
+}
+.button-container{
+    width: 30vw;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+}
+.button-container a{
+    background-color: #3347B0;
+    color: white;
+    width: 80%;
+    height: 25%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    margin: 1px solid #000000;
+    font-size: 5rem;
+    box-shadow: 12px 12px 4px
+        rgba(51, 71, 176, 0.5);
+}
+.button-courses img{
+    height: 100%;
+    width: 30%;
+    padding: 2%;
+}
