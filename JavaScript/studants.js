@@ -7,7 +7,6 @@ const cardCreator = (item) => {
     card.classList.add('card-aluno')
     card.href = '../pages/studantinfo.html'
     card.setAttribute('id', item.matricula)
-    let cor = ''
     card.innerHTML = `
         <img class="student-icon" src="${item.foto}">
         <p>${item.nome}</p>
