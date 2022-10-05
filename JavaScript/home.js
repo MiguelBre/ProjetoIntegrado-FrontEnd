@@ -5,7 +5,7 @@ import { cursosAPI } from "./API.js"
 const loadButton = (item) => {
     const button = document.createElement('a')
     button.classList.add('button-courses')
-    button.href = './FrontEnd/pages/studants.html'
+    button.href = './pages/studants.html'
     button.innerHTML = `
         <img src="${item.icone}" alt="">
         <p>${item.sigla}</p>

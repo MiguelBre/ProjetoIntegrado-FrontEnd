@@ -1,6 +1,9 @@
 'use strict'
 
-import { alunosAPI, cursosAPI } from "./API.js"
+import { alunosAPI } from "./API.js"
+
+const filterStatus = document.querySelector('#select-status')
+const buttonSearch = document.querySelector('.search-button')
 
 const cardCreator = (item) => {
     const card = document.createElement('a')
@@ -20,15 +23,27 @@ const cardCreator = (item) => {
 
 const showAlunos = async () => {
     const sigla = localStorage.getItem('course')
-    const alunos = await alunosAPI(sigla)
+    const status = searchFunction()
+    const alunos = await alunosAPI(sigla, status)
     const container = document.getElementById('cards-container')
-    
-    const filterStatus = document.getElementById('select-status').value
     
     const criarCard = alunos.map(cardCreator)
     container.replaceChildren(...criarCard)
 }
-showAlunos()
+
+const searchFunction = () => {
+    const filter = filterStatus.value
+    if (filter == 'Finalizado') {
+        showAlunos('Finalizado')
+    } else if(filter == 'Cursando'){
+        showAlunos('Cursando')
+    } else {
+        showAlunos('Todos')
+    }
+    return filter
+}
+buttonSearch.addEventListener('click', searchFunction)
+
 
 const nomeCurso = async () => {
     const div = document.getElementById('nome-container')
@@ -43,3 +58,4 @@ const record = (e) => {
     const nMatricula = e.currentTarget.id
     localStorage.setItem('matricula', nMatricula)
 }
+searchFunction()

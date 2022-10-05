@@ -7,8 +7,8 @@ const cursosAPI = async () => {
     return listCursos.cursos
 }
 
-const alunosAPI = async (sigla) => {
-    const url = `http://localhost:8080/alunos/curso/${sigla}`
+const alunosAPI = async (sigla, status) => {
+    const url = `http://localhost:8080/alunos/${sigla}/${status}`
     const response = await fetch(url)
     const listAlunos = await response.json()
     return listAlunos
